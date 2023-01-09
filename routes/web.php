@@ -20,3 +20,5 @@ Route::get(uri: '/chi-siamo', action: [PageController::class, 'about'])->name( n
 
 
 Route::get(uri: '/lista-films', action: [PageController::class, 'listaFilms'])->name( name:'lista-films');
+
+Route::get('/movie-details/{id}', [PageController::class, 'movieDetail'])->name('movieDetail');

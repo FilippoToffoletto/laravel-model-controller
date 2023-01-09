@@ -22,4 +22,15 @@ class PageController extends Controller
 
         return view(view:'lista-films', data: compact('movies'));
     }
+
+    public function movieDetail($id)
+    {
+        $movie = Movie::find($id);
+
+        if (is_null($movie)) {
+            abort(404);
+        }
+
+        return view('movie-detail', compact('movie'));
+    }
 }
