@@ -1,1 +1,31 @@
-@import '~bootstrap/scss/bootstrap'
+@import '../scss/partials/colors.scss';
+@import '~bootstrap/scss/bootstrap';
+
+body{
+    background-color: $background;
+    color: $main-text;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5{
+    color: $main-text;
+}
+
+.navbar{
+    a{
+        color: white;
+    }
+    li{
+        &:hover{
+            background-color: $text;
+            border-radius: 10px;
+        }
+        a:hover{
+            color: white;
+        }
+    }
+
+}
